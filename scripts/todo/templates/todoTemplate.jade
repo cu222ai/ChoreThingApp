@@ -1,0 +1,19 @@
+#view
+  #content
+    if done == false
+    .span6.pull-right(style='text-align: right;')
+        a.btn.pull-right Done?
+      #label #{title}
+      p
+      a.destroy
+        label.label.label-warning
+          span.glyphicon.glyphicon-trash
+      span.label.label-warning
+      if done == true
+        span.label.label-success
+          label(id='#{done}') Completed on #{date}
+      if done == false
+        span.label.label-default
+          label(id='#{done}') In Progress
+
+  input.edit(type='text', value='#{title}', style='display: none;')
